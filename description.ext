@@ -1,0 +1,84 @@
+/* Arma 3 fixes */
+class CfgFunctions {
+  class fixes {
+    class fixed {
+      class initPlayerServer { file="initPlayerServer.sqf"; };
+    };
+  };
+  #include "uk1r\functions\CfgFunctions.hpp"
+};
+
+class CfgRemoteExec {
+  class Functions {
+    mode = 1; // 0 = Blocked, 1 = Whitelisted, 2 = Unrestricted.
+    jip = 1; // 0 = JIP disabled, 1 = JIP flag can be set.
+    /* 
+    class function_name_here {
+      allowedTargets = 0; // 0 = All machines, 1 = Players only, 2 = Server only.
+      jip = 0; // Override above global setting.
+    };
+    */
+    // Fixes initPlayerServer not working unless execVM is whitelisted (bad idea!).
+    class fixes_fnc_initPlayerServer { allowedTargets = 2; };
+    // Default game functions that need whitelisting.
+    class BIS_fnc_effectKilledAirDestruction {};
+    class BIS_fnc_effectKilledSecondaries {};
+    class BIS_fnc_fire {};
+    class BIS_fnc_objectVar {};
+    class BIS_fnc_setCustomSoundController {};
+  };
+  class Commands {
+    mode = 1;
+    /*
+    class some_command {
+      allowedTargets = 1;
+      jip = 0;
+    };
+    */
+  };
+};
+
+/* CBA stuff */
+cba_settings_whitelist[] = {"admin"};
+
+class Extended_PreInit_EventHandlers {
+  // Component settings.
+  //uk1r_spawner_settings = "call compile preprocessFileLineNumbers 'uk1r\functions\spawner\settings.sqf'";
+};
+
+/* Framework configurations */
+
+class CfgFactions {
+  // Base config, for inheritence only.
+  #include "uk1r\data\factions\base.hpp"
+  // Blufor factions.
+  #include "uk1r\data\factions\blu_nato_temperate.hpp"
+  #include "uk1r\data\factions\blu_nato_tropic.hpp"
+  #include "uk1r\data\factions\blu_nato_arid.hpp"
+  #include "uk1r\data\factions\blu_guerilla.hpp"
+  #include "uk1r\data\factions\blu_insurgents.hpp"
+  // Opfor factions.
+  #include "uk1r\data\factions\opf_csat_temperate.hpp"
+  #include "uk1r\data\factions\opf_csat_tropic.hpp"
+  #include "uk1r\data\factions\opf_csat_arid.hpp"
+  #include "uk1r\data\factions\opf_guerilla.hpp"
+  #include "uk1r\data\factions\opf_insurgents.hpp"
+  // Indep factions.
+  #include "uk1r\data\factions\gre_aaf.hpp"
+  #include "uk1r\data\factions\gre_ldf.hpp"
+  #include "uk1r\data\factions\gre_guerilla.hpp"
+  #include "uk1r\data\factions\gre_insurgents.hpp"
+  // Civilian factions.
+  #include "uk1r\data\factions\civ_mediterranean.hpp"
+  #include "uk1r\data\factions\civ_middle_east.hpp"
+};
+
+
+// Dialogues and displays.
+#include "uk1r\data\ui\base.hpp"
+#include "uk1r\data\ui\displays\RscGarage.hpp"
+#include "uk1r\data\ui\displays\RscPhoneBase.hpp"
+#include "uk1r\data\ui\displays\RscTabletBase.hpp"
+#include "uk1r\data\ui\displays\RscTadsBase.hpp"
+
+class RscTitles {};
