@@ -7,17 +7,18 @@ class DOUBLES(PREFIX,FACTION) {
 	side = 8; // 0 = Opfor, 1 = Blufor, 2 = Indep, 3 = Civilian. 
 	class units {
 		class base {
-			backpack[] = {};
+			backpacks[] = {};
+      		faces[] = {};
 			headgear[] = {};
-			identity[] = {};
 			items[] = {};
 			goggles[] = {};
-			uniform[] = {};
-			vest[] = {};
-			weaponLauncher[] = {};
-			weaponPrimary[] = {};
-			weaponSecondary[] = {};
-			textures[] = {}; // {selection, path_to_texture}
+			uniforms[] = {};
+			vests[] = {};
+      		voices[] = {};
+			weaponsLauncher[] = {};
+			weaponsPrimary[] = {};
+			weaponsSecondary[] = {};
+			textures[] = {}; // {selection, path to texture}
 		};
 	};
 	class groups {
