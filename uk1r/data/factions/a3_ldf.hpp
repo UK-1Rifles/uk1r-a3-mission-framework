@@ -1,10 +1,10 @@
 #include "..\..\script_mod.hpp"
-#define FACTION blu_ins
+#define FACTION a3_ldf
 
 class DOUBLES(PREFIX,FACTION) {
 	addons[] = {};
 	scope = 2;
-	side = 1;
+	side = 2;
 	class units {};
 	class groups {
 		class infantry {};

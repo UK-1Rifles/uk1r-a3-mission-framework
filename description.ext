@@ -51,34 +51,18 @@ class Extended_PreInit_EventHandlers {
 class CfgFactions {
   // Base config, for inheritence only.
   #include "uk1r\data\factions\base.hpp"
-  // Blufor factions.
-  #include "uk1r\data\factions\blu_nato_temperate.hpp"
-  #include "uk1r\data\factions\blu_nato_tropic.hpp"
-  #include "uk1r\data\factions\blu_nato_arid.hpp"
-  #include "uk1r\data\factions\blu_guerilla.hpp"
-  #include "uk1r\data\factions\blu_insurgents.hpp"
-  // Opfor factions.
-  #include "uk1r\data\factions\opf_csat_temperate.hpp"
-  #include "uk1r\data\factions\opf_csat_tropic.hpp"
-  #include "uk1r\data\factions\opf_csat_arid.hpp"
-  #include "uk1r\data\factions\opf_guerilla.hpp"
-  #include "uk1r\data\factions\opf_insurgents.hpp"
-  // Indep factions.
-  #include "uk1r\data\factions\gre_aaf.hpp"
-  #include "uk1r\data\factions\gre_ldf.hpp"
-  #include "uk1r\data\factions\gre_guerilla.hpp"
-  #include "uk1r\data\factions\gre_insurgents.hpp"
-  // Civilian factions.
-  #include "uk1r\data\factions\civ_mediterranean.hpp"
-  #include "uk1r\data\factions\civ_middle_east.hpp"
+  #include "uk1r\data\factions\a3_usa_arid.hpp"
+  #include "uk1r\data\factions\a3_usa_semiarid.hpp"
+  #include "uk1r\data\factions\a3_usa_tropical.hpp"
+  #include "uk1r\data\factions\a3_usa_woodland.hpp"
 };
 
 
 // Dialogues and displays.
 #include "uk1r\data\ui\base.hpp"
-#include "uk1r\data\ui\displays\RscGarage.hpp"
-#include "uk1r\data\ui\displays\RscPhoneBase.hpp"
-#include "uk1r\data\ui\displays\RscTabletBase.hpp"
-#include "uk1r\data\ui\displays\RscTadsBase.hpp"
+//#include "uk1r\data\ui\displays\RscGarage.hpp"
+//#include "uk1r\data\ui\displays\RscPhoneBase.hpp"
+//#include "uk1r\data\ui\displays\RscTabletBase.hpp"
+//#include "uk1r\data\ui\displays\RscTadsBase.hpp"
 
 class RscTitles {};

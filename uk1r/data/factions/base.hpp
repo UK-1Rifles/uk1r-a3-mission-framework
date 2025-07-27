@@ -4,53 +4,48 @@
 class DOUBLES(PREFIX,FACTION) {
 	addons[] = {};
 	scope = 1; // Set this to 2 for factions you want to be visible.
-	side = 8; // 0 = Opfor, 1 = Blufor, 2 = Indep, 3 = Civilian. 
 	class units {
 		class base {
 			backpacks[] = {};
-      		faces[] = {};
+			faces[] = {};
 			headgear[] = {};
 			items[] = {};
 			goggles[] = {};
+			magazines[] = {};
 			uniforms[] = {};
 			vests[] = {};
-      		voices[] = {};
-			weaponsLauncher[] = {};
+			voices[] = {};
+			weaponsLauncher[] = {}; // {weapon, scope, accessory, muzzle, underbarrel {{magazine_1, count}, {magazine_2, count}}}
 			weaponsPrimary[] = {};
 			weaponsSecondary[] = {};
 			textures[] = {}; // {selection, path to texture}
 		};
 	};
 	class groups {
-		class infantry {
-			/*
-			--- Example group ---
-			class sentry {
-				roles[] = {}; // E.g. patrol, guard, medical etc...
-				class units {
-					class unit0 {
-						type = "";
-						rank = "";
-					};
-					class unit1 {
-						type = "";
-						rank = "";
+		class base {
+			roles[] = {}; // E.g. patrol, guard, medical etc...
+			class units {
+				/*
+				class unit0 {
+					type = "classname";
+					rank = "rank";
+				};
+				*/
+			};
+			class vehicles {
+				/*
+				class vehicle0 {
+					type = ""; // Classname from faction units.
+					class crew {
+						class crew0 {
+							type = ""; // Classname from faction units.
+							rank = "";
+							position = ""; // driver, gunner, commander or cargo
+						};
 					};
 				};
+				*/
 			};
-			*/
-		};
-		class motorized {
-
-		};
-		class mechanized {
-
-		};
-		class armour {
-
-		};
-		class air {
-
 		};
 	};
 	class skill {
