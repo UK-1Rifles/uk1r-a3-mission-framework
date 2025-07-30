@@ -3,7 +3,7 @@
 
 class DOUBLES(PREFIX,FACTION) : DOUBLES(PREFIX,base) {
 	addons[] = {};
-  displayName = "A3 US military (arid)"
+  displayName = "A3 US military (arid)";
 	scope = 2;
 	class units : units {
 		class TRIPLES(PREFIX,FACTION,base) : base {
@@ -88,7 +88,7 @@ class DOUBLES(PREFIX,FACTION) : DOUBLES(PREFIX,base) {
 				"H_HelmetB_grass",
 				"H_HelmetB_snakeskin"
 			};
-			items[] = {"ItemMap", "ItemCompass", "ItemGPS", "ItemRadio", "ItemWatch"};
+			items[] = {"ItemMap", "ItemCompass", "ItemGPS", "ItemRadio", "ItemWatch", {"FirstAidKit", 3}, "NVGoggles", "Rangefinder"};
 			goggles[] = {
 				"None",
 				"G_Combat",
@@ -137,13 +137,14 @@ class DOUBLES(PREFIX,FACTION) : DOUBLES(PREFIX,base) {
 				"Male05GRE",
 				"Male06GRE"
 			};
+			skill = "base_regular";
 		};
 		class TRIPLES(PREFIX,FACTION,rifleman) : TRIPLES(PREFIX,FACTION,base) {
 			weaponPrimary[] = {
-				{"arifle_MX_F", "optic_Holosight_arid_F", "acc_pointer_IR", "", "", {{MAGAZINE_PRIMARY_T, 3}, {MAGAZINE_PRIMARY, 6}}}
+				{"arifle_MX_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer"}, {{"30Rnd_65x39_caseless_mag_Tracer", 2}, {"30Rnd_65x39_caseless_mag", 6}}}
 			};
 			weaponSecondary[] = {
-				{"B_Patrol_Soldier_Pistol_F", "", "", {{MAGAZINE_SECONDARY, 3}}}
+				{"hgun_ACPC2_F", {"", "", "", "9Rnd_45ACP_Mag"}, {{"9Rnd_45ACP_Mag", 2}}}
 			};
 		};
 		class TRIPLES(PREFIX,FACTION,grenadier) : TRIPLES(PREFIX,FACTION,base) {};
