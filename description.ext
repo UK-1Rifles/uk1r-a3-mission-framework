@@ -50,11 +50,11 @@ class Extended_PreInit_EventHandlers {
 
 class CfgFactions {
   // Base config, for inheritence only.
-  #include "uk1r\data\factions\base.hpp"
-  #include "uk1r\data\factions\a3_usa_arid.hpp"
-  #include "uk1r\data\factions\a3_usa_semiarid.hpp"
-  #include "uk1r\data\factions\a3_usa_tropical.hpp"
-  #include "uk1r\data\factions\a3_usa_woodland.hpp"
+  #include "uk1r\data\CfgFactions.hpp"
+};
+
+class CfgSkill {
+  #include "uk1r\data\CfgSkill.hpp"
 };
 
 

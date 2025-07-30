@@ -1,0 +1,5 @@
+  #include "factions\base.hpp"
+  #include "factions\a3_usa_arid.hpp"
+  #include "factions\a3_usa_semiarid.hpp"
+  #include "factions\a3_usa_tropical.hpp"
+  #include "factions\a3_usa_woodland.hpp"
