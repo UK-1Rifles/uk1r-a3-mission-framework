@@ -1,4 +1,3 @@
-/* Arma 3 fixes */
 class CfgFunctions {
   class fixes {
     class fixed {
@@ -43,14 +42,25 @@ cba_settings_whitelist[] = {"admin"};
 
 class Extended_PreInit_EventHandlers {
   // Component settings.
-  //uk1r_spawner_settings = "call compile preprocessFileLineNumbers 'uk1r\functions\spawner\settings.sqf'";
+  uk1r_arsenal_settings = "call compile preprocessFileLineNumbers 'uk1r\functions\arsenal\settings.sqf'";
+  uk1r_spawner_settings = "call compile preprocessFileLineNumbers 'uk1r\functions\spawner\settings.sqf'";
+};
+
+class Extended_FiredBIS_EventHandlers {
+  #include "uk1r\XEH_firedBIS.hpp"
 };
 
 /* Framework configurations */
+class CfgArsenal {
+  #include "uk1r\data\CfgArsenal.hpp"
+};
 
 class CfgFactions {
-  // Base config, for inheritence only.
   #include "uk1r\data\CfgFactions.hpp"
+};
+
+class CfgRoles {
+  #include "uk1r\data\CfgRoles.hpp"
 };
 
 class CfgSkill {
