@@ -11,7 +11,7 @@ GVAR(init) = false;
 ] call BIS_fnc_addScriptedEventHandler;
 
 // Initialise the equipment list from config.
-if (isNil QGVAR(equipment)) then {}
+if (isNil QGVAR(equipment)) then {
   FUNC(updateFromConfig);
 };
 
