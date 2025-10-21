@@ -1,14 +1,6 @@
 #include "script_component.hpp"
 
-if !(hasInterface) exitWith {false}; // Clients only.
-
-params [
-  ["_arsenal", objNull, [objNull]]
-];
-
-if (isNull _arsenal) exitWith {false}; // Validate arsenal object.
-
-if (side player != _arsenal getVariable [QGVAR(side), sideUnknown])
+if !(hasInterface) exitWith {[]}; // Clients only.
 
 // Generate equipment list.
 private _backpacks = [];
@@ -23,7 +15,7 @@ private _config = (switch (side player) do {
   default {};
 });
 
-if (isNil "_config") exitWith {false};
+if (isNil "_config") exitWith {[]};
 
 // Loop through all subclasses and add to the equipment lists.
 {
@@ -43,10 +35,4 @@ if (isNil "_config") exitWith {false};
   };
 } forEach ("true" configClasses (_config));
 
-// Set arsenal contents.
-[_arsenal, _backpacks, false, false] call BIS_fnc_addVirtualBackpackCargo;
-[_arsenal, _items, false, false] call BIS_fnc_addVirtualItemCargo;
-[_arsenal, _magazines, false, false] call BIS_fnc_addVirtualMagazineCargo;
-[_arsenal, _weapons, false, false] call BIS_fnc_addVirtualWeaponCargo;
-
-true
+GVAR(equipment) = [_backpacks, _items, _magazines, _weapons];

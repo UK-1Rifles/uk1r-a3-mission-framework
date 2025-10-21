@@ -1,11 +1,12 @@
 #include "script_component.hpp"
 
+if !(hasInterface) exitWith {false}; // Client only.
+
 params [
   ["_arsenal", objNull, [objNull]],
   ["_side", sideUnknown, [sideUnknown]]
 ];
 
-if !(hasInterface) exitWith {false}; // Client only.
 if (isNull _arsenal) exitWith {false}; // Validate arsenal object.
 
 // Wait until the player is initialised.
@@ -28,12 +29,12 @@ _arsenal setVariable [QGVAR(side), _side];
     false,
     {
       _side = _originalTarget getVariable [QGVAR(side), sideUnknown];
-      side _this == _side || _side == sideUnknown
+      side _this == _side || _side == sideUnknown // Side of player is equal to arsenal side, or arsenal is open (side set to unknown).
     }
   ]
 ] call BIS_fnc_arsenal;
 
 // Update the contents.
-[_arsenal] call FUNC(update);
+[_arsenal] call FUNC(updateInventory);
 
 true

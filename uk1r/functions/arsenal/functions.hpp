@@ -2,9 +2,9 @@
 class DOUBLES(PREFIX,COMPONENT) {
   class functions {
     file = QUOTE(PREFIX\functions\COMPONENT);
-    class add {};
-    class init {};
-    class remove {};
-    class update {};
+    class addToObject {};
+    class removeFromObject {};
+    class updateFromConfig {};
+    class updateInventory {};
   };
 };
