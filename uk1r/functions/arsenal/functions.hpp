@@ -7,5 +7,6 @@ class DOUBLES(PREFIX,COMPONENT) {
     class removeFromObject {};
     class updateFromConfig {};
     class updateInventory {};
+    class validateLoadout {};
   };
 };
