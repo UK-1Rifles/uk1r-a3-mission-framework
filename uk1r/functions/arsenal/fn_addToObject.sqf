@@ -11,9 +11,8 @@ if (isNull _arsenal) exitWith {false}; // Validate arsenal object.
 
 // Wait until the player is initialised.
 if (isNull player) then {
-  diag_log "Player not initialised yet.";
   if !(canSuspend) exitWith {
-    _this spawn FUNC(add);
+    _this spawn FUNC(addToObject);
   };
   waitUntil {!isNull player};
 };

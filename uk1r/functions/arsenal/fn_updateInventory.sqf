@@ -9,7 +9,7 @@ params [
 if (isNull _arsenal) exitWith {false}; // Validate arsenal object.
 
 if (isNil QGVAR(equipment)) then {
-  FUNC(updateFromConfig);
+  call FUNC(updateFromConfig);
 };
 
 // Set arsenal contents.

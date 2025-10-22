@@ -56,7 +56,13 @@ class ARSENAL : base_arsenal {
       "30Rnd_556x45_Stanag_red",
       "30Rnd_556x45_Stanag_Tracer_Red",
       "30Rnd_556x45_Stanag_Sand_red",
-      "30Rnd_556x45_Stanag_Sand_Tracer_Red"
+      "30Rnd_556x45_Stanag_Sand_Tracer_Red",
+      "16Rnd_9x21_Mag",
+      "16Rnd_9x21_red_Mag",
+      "30Rnd_9x21_Mag",
+      "30Rnd_9x21_Red_Mag",
+      "9Rnd_45ACP_Mag",
+      "11Rnd_45ACP_Mag"
     };
   };
   class DOUBLES(ARSENAL,infantry) : DOUBLES(ARSENAL,base) {
