@@ -12,7 +12,7 @@ GVAR(init) = false;
 
 // Initialise the equipment list from config.
 if (isNil QGVAR(equipment)) then {
-  FUNC(updateFromConfig);
+  call FUNC(updateFromConfig);
 };
 
 GVAR(init) = true;
