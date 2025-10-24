@@ -24,7 +24,7 @@ private _names = _values apply { getText (_x >> "displayName"); };
 	"LIST",
 	[
 		"BLUFOR faction",
-		"Faction to use for the blufor side."
+		"Faction to use for the BLUFOR side."
 	],
 	_category,
 	[
@@ -41,7 +41,7 @@ private _names = _values apply { getText (_x >> "displayName"); };
 	"LIST",
 	[
 		"OPFOR faction",
-		"Faction to use for the opfor side."
+		"Faction to use for the OPFOR side."
 	],
 	_category,
 	[
@@ -58,7 +58,7 @@ private _names = _values apply { getText (_x >> "displayName"); };
 	"LIST",
 	[
 		"GREFOR faction",
-		"Faction to use for the grefor side."
+		"Faction to use for the GREFOR side."
 	],
 	_category,
 	[

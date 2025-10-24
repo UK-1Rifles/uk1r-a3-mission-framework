@@ -101,5 +101,14 @@ if !(isNil "_weapon") then {
   };
 } forEach getArray (_cfgUnit >> "magazines");
 
+// Set the units identity.
+// Not working for some reason...
+//[
+//  _unit,
+//  selectRandom getArray (_cfgUnit >> "faces"),
+//  selectRandom getArray (_cfgUnit >> "voices"),
+//  selectRandom [0.75, 1, 1.25]
+//] call BIS_fnc_setIdentity;
+
 // Return the created unit.
 _unit

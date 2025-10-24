@@ -88,7 +88,7 @@ class DOUBLES(PREFIX,FACTION) : DOUBLES(PREFIX,base) {
 				"H_HelmetB_grass",
 				"H_HelmetB_snakeskin"
 			};
-			items[] = {"ItemMap", "ItemCompass", "ItemGPS", "ItemRadio", "ItemWatch", {"FirstAidKit", 3}, "NVGoggles", "Rangefinder"};
+			items[] = {"ItemMap", "ItemCompass", "ItemGPS", "ItemRadio", "ItemWatch", {"FirstAidKit", 3}, "NVGoggles", "Binocular"};
 			goggles[] = {
 				"None",
 				"G_Combat",
@@ -137,27 +137,89 @@ class DOUBLES(PREFIX,FACTION) : DOUBLES(PREFIX,base) {
 				"Male05GRE",
 				"Male06GRE"
 			};
-			skill = "base_regular";
-		};
-		class TRIPLES(PREFIX,FACTION,rifleman) : TRIPLES(PREFIX,FACTION,base) {
 			weaponPrimary[] = {
 				{"arifle_MX_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer"}, {{"30Rnd_65x39_caseless_mag_Tracer", 2}, {"30Rnd_65x39_caseless_mag", 6}}}
 			};
 			weaponSecondary[] = {
 				{"hgun_ACPC2_F", {"", "", "", "9Rnd_45ACP_Mag"}, {{"9Rnd_45ACP_Mag", 2}}}
 			};
+			skill = "base_regular";
 		};
-		class TRIPLES(PREFIX,FACTION,grenadier) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,light_mg) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,medium_mg) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,heavy_mg) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,hmg_assist) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,light_at) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,medium_at) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,heavy_at) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,hat_assist) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,aa) : TRIPLES(PREFIX,FACTION,base) {};
-		class TRIPLES(PREFIX,FACTION,aa_assist) : TRIPLES(PREFIX,FACTION,base) {};
+		class TRIPLES(PREFIX,FACTION,rifleman) : TRIPLES(PREFIX,FACTION,base) {
+			magazines[] = {{"SmokeShell", 3}, "SmokeShellRed", "SmokeShellBlue", {"HandGrenade", 3}, "200Rnd_556x45_Box_F"};
+		};
+		class TRIPLES(PREFIX,FACTION,grenadier) : TRIPLES(PREFIX,FACTION,base) {
+			magazines[] += {"SmokeShellRed"};
+			weaponPrimary[] = {
+				{"arifle_MX_GL_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer" ,"1Rnd_HE_Grenade_shell"}, {{"30Rnd_65x39_caseless_mag_Tracer", 2}, {"30Rnd_65x39_caseless_mag", 6}, {"1Rnd_HE_Grenade_shell", 8}, {"1Rnd_Smoke_Grenade_shell", 6}, {"1Rnd_SmokeBlue_Grenade_shell", 3}}}
+			};
+		};
+		class TRIPLES(PREFIX,FACTION,light_mg) : TRIPLES(PREFIX,FACTION,base) {
+      magazines[] = {{"SmokeShell", 3}, "SmokeShellRed", "SmokeShellBlue", "HandGrenade"};
+      weaponPrimary[] = {
+				{"arifle_MX_SW_F", {"optic_Holosight", "acc_flashlight", "", "", "100Rnd_65x39_caseless_mag_Tracer"}, {{"100Rnd_65x39_caseless_mag_Tracer", 1}, {"100Rnd_65x39_caseless_mag", 4}}}
+			};
+    };
+		class TRIPLES(PREFIX,FACTION,medium_mg) : TRIPLES(PREFIX,FACTION,base) {
+      magazines[] = {"SmokeShell", "SmokeShellRed", "SmokeShellBlue", "HandGrenade"};
+      weaponPrimary[] = {
+				{"LMG_03_F", {"optic_Holosight", "acc_flashlight", "", "", "100Rnd_65x39_caseless_mag_Tracer"}, {{"200Rnd_556x45_Box_F", 2}}}
+			};
+    };
+		class TRIPLES(PREFIX,FACTION,heavy_mg) : TRIPLES(PREFIX,FACTION,base) {
+      magazines[] = {"SmokeShell", "SmokeShellRed", "SmokeShellBlue"};
+      weaponPrimary[] = {
+        {"MMG_02_sand_F", {"optic_Holosight", "acc_pointer_IR", "", "", "130Rnd_338_Mag"}, {{"130Rnd_338_Mag", 2}}}
+      };
+    };
+		class TRIPLES(PREFIX,FACTION,hmg_assist) : TRIPLES(PREFIX,FACTION,base) {
+      backpacks[] = {"B_Kitbag_mcamo", "B_Kitbag_rgr", "B_Kitbag_sgg", "B_Kitbag_cbr", "B_Kitbag_tan"};
+      magazines[] = {"SmokeShell", "SmokeShellRed", "SmokeShellBlue", {"130Rnd_338_Mag", 4}};
+      weaponPrimary[] = {
+				{"arifle_MXC_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer"}, {{"30Rnd_65x39_caseless_mag_Tracer", 1}, {"30Rnd_65x39_caseless_mag", 4}}}
+			};
+    };
+		class TRIPLES(PREFIX,FACTION,medium_at) : TRIPLES(PREFIX,FACTION,base) {
+      backpacks[] = {"B_Kitbag_mcamo", "B_Kitbag_rgr", "B_Kitbag_sgg", "B_Kitbag_cbr", "B_Kitbag_tan"};
+      weaponLauncher[] += {
+        {"launch_MRAWS_sand_rail_F", {"MRAWS_HEAT_F"}, {{"MRAWS_HEAT_F", 2}}}
+      };
+      weaponPrimary[] = {
+				{"arifle_MXC_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer"}, {{"30Rnd_65x39_caseless_mag_Tracer", 1}, {"30Rnd_65x39_caseless_mag", 4}}}
+			};
+    };
+		class TRIPLES(PREFIX,FACTION,heavy_at) : TRIPLES(PREFIX,FACTION,base) {
+      magazines[] = {"SmokeShell", "SmokeShellRed", "SmokeShellBlue"};
+      weaponLauncher[] += {
+        {"launch_Titan_short_F", {"Titan_AT"}, {{"Titan_AT", 1}}}
+      };
+      weaponPrimary[] = {
+				{"arifle_MXC_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer"}, {{"30Rnd_65x39_caseless_mag_Tracer", 1}, {"30Rnd_65x39_caseless_mag", 4}}}
+			};
+    };
+		class TRIPLES(PREFIX,FACTION,hat_assist) : TRIPLES(PREFIX,FACTION,base) {
+      backpacks[] = {"B_Carryall_cbr", "B_Carryall_khk", "B_Carryall_khk", "B_Carryall_mcamo", "B_Carryall_oli"};
+      magazines[] = {"SmokeShell", "SmokeShellRed", "SmokeShellBlue", {"Titan_AT", 3}};
+      weaponPrimary[] = {
+				{"arifle_MXC_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer"}, {{"30Rnd_65x39_caseless_mag_Tracer", 1}, {"30Rnd_65x39_caseless_mag", 4}}}
+			};
+    };
+		class TRIPLES(PREFIX,FACTION,aa) : TRIPLES(PREFIX,FACTION,base) {
+      magazines[] = {"SmokeShell", "SmokeShellRed", "SmokeShellBlue"};
+      weaponLauncher[] += {
+        {"launch_Titan_F", {"Titan_AA"}, {{"Titan_AA", 1}}}
+      };
+      weaponPrimary[] = {
+				{"arifle_MXC_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer"}, {{"30Rnd_65x39_caseless_mag_Tracer", 1}, {"30Rnd_65x39_caseless_mag", 4}}}
+			};
+    };
+		class TRIPLES(PREFIX,FACTION,aa_assist) : TRIPLES(PREFIX,FACTION,base) {
+      backpacks[] = {"B_Carryall_cbr", "B_Carryall_khk", "B_Carryall_khk", "B_Carryall_mcamo", "B_Carryall_oli"};
+      magazines[] = {"SmokeShell", "SmokeShellRed", "SmokeShellBlue", {"Titan_AA", 3}};
+      weaponPrimary[] = {
+				{"arifle_MXC_F", {"optic_Holosight", "acc_flashlight", "", "", "30Rnd_65x39_caseless_mag_Tracer"}, {{"30Rnd_65x39_caseless_mag_Tracer", 1}, {"30Rnd_65x39_caseless_mag", 4}}}
+			};
+    };
 		class TRIPLES(PREFIX,FACTION,mortar) : TRIPLES(PREFIX,FACTION,base) {};
 		class TRIPLES(PREFIX,FACTION,mortar_assist) : TRIPLES(PREFIX,FACTION,base) {};
 		class TRIPLES(PREFIX,FACTION,medic) : TRIPLES(PREFIX,FACTION,base) {};
@@ -175,6 +237,7 @@ class DOUBLES(PREFIX,FACTION) : DOUBLES(PREFIX,base) {
 		class infantry {
 			class TRIPLES(PREFIX,FACTION,patrol) : base {
 				roles[] = {"guard"};
+				class units {};
 			};
 		};
 		class motorized {};
