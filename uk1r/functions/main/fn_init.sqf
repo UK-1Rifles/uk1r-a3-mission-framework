@@ -7,9 +7,9 @@ call EFUNC(spawner,init);
 //call EFUNC(persistence,init);
 
 // Extension modules.
-//call EFUNC(squad,init);
-//call EFUNC(arsenal,init);
+call EFUNC(squad,init);
+call EFUNC(arsenal,init);
 //call EFUNC(garage,init);
-//call EFUNC(support,init);
+call EFUNC(supports,init);
 //call EFUNC(civilians,init);
 //call EFUNC(stats,init);
