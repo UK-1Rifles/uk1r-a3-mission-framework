@@ -6,8 +6,10 @@ class DOUBLES(PREFIX,aircrew) {
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_Helipilot_F",
     "B_helicrew_F",
@@ -17,25 +19,27 @@ class DOUBLES(PREFIX,aircrew) {
   };
 };
 class DOUBLES(PREFIX,antiair) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
-  launchers = 0;
-  statics = 0;
+  grenadeLaunchers = 0;
+  launchers = 1;
+  staticWeapons = 0;
   units[] = {
     "B_soldier_AA_F"
   };
 };
 class DOUBLES(PREFIX,antitank) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
-  launchers = 0;
-  statics = 0;
+  grenadeLaunchers = 0;
+  launchers = 1;
+  staticWeapons = 0;
   units[] = {
     "B_soldier_AT_F",
     "B_soldier_LAT_F",
@@ -43,13 +47,15 @@ class DOUBLES(PREFIX,antitank) {
   };
 };
 class DOUBLES(PREFIX,engineer) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_engineer_F",
     "B_soldier_exp_F",
@@ -57,76 +63,86 @@ class DOUBLES(PREFIX,engineer) {
   };
 };
 class DOUBLES(PREFIX,grenadier) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 1;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_Soldier_GL_F"
   };
 };
 class DOUBLES(PREFIX,groundcrew) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
-  armourCommander = 0;
-  armourDriver = 0;
-  armourGunner = 0;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
+  armourCommander = 1;
+  armourDriver = 1;
+  armourGunner = 1;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_crew_F"
   };
 };
 class DOUBLES(PREFIX,machinegunner) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 1;
+  staticWeapons = 0;
   units[] = {
     "B_soldier_AR_F",
     "B_HeavyGunner_F"
-
   };
 };
 class DOUBLES(PREFIX,marksman) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_soldier_M_F",
     "B_Sharpshooter_F",
   };
 };
 class DOUBLES(PREFIX,medic) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_medic_F"
   };
 };
 class DOUBLES(PREFIX,officer) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_office_F",
     "B_Officer_Parade_F",
@@ -134,13 +150,15 @@ class DOUBLES(PREFIX,officer) {
   };
 };
 class DOUBLES(PREFIX,rifleman) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_Soldier_A_F",
     "B_soldier_AAR_F",
@@ -155,25 +173,29 @@ class DOUBLES(PREFIX,rifleman) {
   };
 };
 class DOUBLES(PREFIX,squadleader) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_Soldier_SL_F"
   };
 };
 class DOUBLES(PREFIX,support) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 1;
   units[] = {
     "B_support_GMG_F",
     "B_support_MG_F",
@@ -181,25 +203,29 @@ class DOUBLES(PREFIX,support) {
   };
 };
 class DOUBLES(PREFIX,teamleader) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_Soldier_TL_F"
   };
 };
 class DOUBLES(PREFIX,uavoperator) {
-  aircraftPilot = 1;
-  aircraftGunner = 1;
+  aircraftPilot = 0;
+  aircraftGunner = 0;
   armourCommander = 0;
   armourDriver = 0;
   armourGunner = 0;
+  grenadeLaunchers = 0;
   launchers = 0;
-  statics = 0;
+  machineguns = 0;
+  staticWeapons = 0;
   units[] = {
     "B_soldier_UAV_F",
     "B_soldier_UAV_06_F",
