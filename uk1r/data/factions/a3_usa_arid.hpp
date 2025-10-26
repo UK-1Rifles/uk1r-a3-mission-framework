@@ -233,6 +233,24 @@ class DOUBLES(PREFIX,FACTION) : DOUBLES(PREFIX,base) {
 		class TRIPLES(PREFIX,FACTION,heli_crew) : TRIPLES(PREFIX,FACTION,base) {};
 		class TRIPLES(PREFIX,FACTION,pilot) : TRIPLES(PREFIX,FACTION,base) {};
 	};
+	class vehicles : vehicles {
+		class TRIPLES(PREFIX,FACTION,lpv) : base {
+			baseClass = "B_LSV_01_unarmed_F";
+			inventory[] = {{"FirstAidKit", 10}};
+		};
+		class TRIPLES(PREFIX,FACTION,lpv_mg) : base {
+			baseClass = "B_LSV_01_armed_F";
+			inventory[] = {{"FirstAidKit", 10}};
+			magazines[] = {
+				{"", [], -1}
+			};
+		};
+		class TRIPLES(PREFIX,FACTION,lpv_at) : base {
+			baseClass = "B_LSV_01_AT_F";
+			inventory[] = {{"FirstAidKit", 10}};
+			magazines[] = {};
+		};
+	};
 	class groups : groups {
 		class infantry {
 			class TRIPLES(PREFIX,FACTION,patrol) : base {
